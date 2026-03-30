@@ -37,6 +37,13 @@ function cadastrarProduto(event) {
     const novaCategoria = document.getElementById("newCategory").value;
     const preco = document.getElementById("fprice").value;
 
+    // Validação para não ter nome e preço vazios, proteção extra para além do required
+    if (!nome || isNaN(preco) || preco <= 0 || 
+        (categoriaSelect === "outra" && !novaCategoria)) {
+        alert("Preencha todos os campos corretamente!");
+        return;
+    }
+
     // Variável para armazenar a categoria
     let categoriaFinal;
 
