@@ -1,0 +1,164 @@
+/* Remoção de margens e espaçamentos internos padrão dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Definição da fonte, cor de fundo, cor do texto e espaçamento interno do body */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc; 
+    color: #0f172a; 
+    padding: 2rem 1rem; 
+    line-height: 1.5;
+}
+
+/* Limita a largura máxima do main e centraliza horizontalmente */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilização do título H1: centralizado, cor azul e tamanho de fonte 2.5rem */
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Estilização do título H2: tamanho de fonte 1.5rem, espaçamento na parte inferior e borda para criação de uma linha horizontal */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo dos formulários */
+
+/* Estilização da div do formulário de cadastro: fundo branco, ajuste no espaçamento, borda arredondada com sombra e margem inferior*/
+.form-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+
+/* Estilização das labels: negrito e margem na parte inferior */
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilização dos campos a serem preenchidos no cadastro: padronização de tamanho, espaçamento, cor de borda e destaque ao ser clicado */
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Confirmação visual ao clicar no input e select, feedback de status */
+input:focus, select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); 
+}
+
+/* Estilização do botão: cor azul, texto branco, sem borda, ajuste no espaçamento e tamanho*/
+/* Ponteiro pointer para indicar clicável, transição de cor */
+button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+/* Hover para feedback visual também, indicando que é clicável */
+button:hover {
+    background-color: #4338ca;
+}
+
+/* Estilo do catálogo  */
+.catalog-container {
+    display: grid; /* Define que o container usará layout em grade (CSS Grid) */
+    
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    /* Cria colunas automáticas que se repetem, preenchendo o espaço disponível com o máximo de colunas possíveis
+       com colunas de no máximo 280px e pode crescer até ocupar uma fração igual do espaço disponível */
+    
+    gap: 1.5rem; /* Define o espaçamento entre os itens da grade*/
+}
+
+/* Estitização dos cards de produto: cor de fundo branco, com borda arredondada, ajuste no espaçamento, sombra */
+/* Transição adicionada para indicar interação */
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Estlização do título h3 do card: margem e cor da fonte escura */
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+/* Estlização dos parágrafos do card: margem e cor da fonte cinza claro */
+.product-card p {
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+/* Estlização do botão do card: cor do botão vermelha */
+.product-card button {
+    background-color: #ef4444;
+}
+
+/* Hover adicionado para indicar interação */
+.product-card button:hover {
+    background-color: #dc2626;
+}
+
+/* Estilização da seção de métricas: fundo branco, espaçamento ajustado, borda arredondada e tamanho pré-definido */
+.stats-section {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 2rem auto; 
+    text-align: center;
+}
+
+/* Rótulos "total" e "média" das métricas: cor azul*/
+.rotuloMetrica {
+    color: #4f46e5;
+    font-size: 1.2rem;
+}
+
+.stats-section p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
